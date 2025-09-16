@@ -1,26 +1,15 @@
-
 {
-  "manifest_version": 2,
-
+  "manifest_version": 3,
   "name": "libdoge",
+  "version": "0.2",
   "description": "such god doge",
-  "version": "0.1.9",
 
-  "icons": {
-    "48" : "img/icon-48.png",
-    "128" : "img/icon-128.png"
-  },
-  "background": {
-    "scripts": [
-      "run.js"
-    ],
-    "persistent": false
-  },
-  "permissions": [
-    "activeTab"
-  ],
-  "browser_action": {
+  "icons": { "48" : "img/icon-48.png", "128" : "img/icon-128.png" },
+
+  "action": {
     "default_title": "doge go",
-    "default_icon": "img/icon-19.png"
-  }
+    "default_icon": { "16": "img/icon-19.png", "48": "img/icon-48.png", "128": "img/icon-128.png" }
+  },
+  "background": { "service_worker": "run.js" },
+  "permissions": [ "activeTab", "scripting" ]
 }
